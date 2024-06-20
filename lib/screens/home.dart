@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:task_2_to_do_list_app/constants/colors.dart';
+import 'package:task_2_to_do_list_app/model/todo.dart';
 import 'package:task_2_to_do_list_app/widgets/todo_items.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  HomeScreen({super.key});
+
+  final todosList = ToDo.todoList();
 
   @override
   Widget build(BuildContext context) {
@@ -28,14 +31,7 @@ class HomeScreen extends StatelessWidget {
                             fontWeight: FontWeight.bold),
                       ),
                     ),
-                    const ToDoItem(),
-                    const ToDoItem(),
-                    const ToDoItem(),
-                    const ToDoItem(),
-                    const ToDoItem(),
-                    const ToDoItem(),
-                    const ToDoItem(),
-                    const ToDoItem(),
+                    for (ToDo todoo in todosList) ToDoItem(todo: todoo),
                   ],
                 ),
               )

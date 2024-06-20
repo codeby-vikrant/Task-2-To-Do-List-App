@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:task_2_to_do_list_app/constants/colors.dart';
+import 'package:task_2_to_do_list_app/model/todo.dart';
 
 class ToDoItem extends StatelessWidget {
-  const ToDoItem({super.key});
+  final ToDo todo;
+  const ToDoItem({super.key, required this.todo});
 
   @override
   Widget build(BuildContext context) {
@@ -21,12 +23,12 @@ class ToDoItem extends StatelessWidget {
           Icons.check_box,
           color: tdBlue,
         ),
-        title: const Text(
-          'Check Email',
+        title: Text(
+          todo.todoText!,
           style: TextStyle(
               fontSize: 16,
               color: tdBlack,
-              decoration: TextDecoration.lineThrough),
+              decoration: todo.isDone ? TextDecoration.lineThrough : null),
         ),
         trailing: Container(
           padding: const EdgeInsets.all(0),
