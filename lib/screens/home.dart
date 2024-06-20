@@ -9,12 +9,19 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: tdBGColor,
-        title: const Row(
+        title: Row(
           children: [
-            Icon(
+            const Icon(
               Icons.menu,
               color: tdBlack,
               size: 30,
+            ),
+            Container(
+              height: 40,
+              width: 40,
+              child: ClipRRect(
+                child: Image.asset('assets/images/todo.png'),
+              ),
             )
           ],
         ),
