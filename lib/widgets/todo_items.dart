@@ -8,10 +8,13 @@ class ToDoItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: ListTile(
-        onTap: () {},
+        onTap: () {
+          print("Clicked on todo item");
+        },
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
         ),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
         tileColor: Colors.white,
         leading: const Icon(
           Icons.check_box,
@@ -25,6 +28,8 @@ class ToDoItem extends StatelessWidget {
               decoration: TextDecoration.lineThrough),
         ),
         trailing: Container(
+          padding: const EdgeInsets.all(0),
+          margin: const EdgeInsets.symmetric(vertical: 12),
           height: 35,
           width: 35,
           decoration: BoxDecoration(
