@@ -13,6 +13,8 @@ class ToDo {
       ToDo(id: '04', todoText: 'Team Meeting'),
       ToDo(id: '05', todoText: 'Work on mobile apps for 2 hours'),
       ToDo(id: '06', todoText: 'Dinner with Jenny'),
+      ToDo(id: '07', todoText: 'Buy a new laptop'),
+      ToDo(id: '08', todoText: 'Work on tasks given'),
     ];
   }
 }
