@@ -42,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ToDoItem(
                             todo: todoo,
                             onToDoChanged: _handleToDoChange,
-                            onDeleteItem: () {},
+                            onDeleteItem: _deleteToDoItem,
                           ),
                       ],
                     ),
@@ -101,6 +101,12 @@ class _HomeScreenState extends State<HomeScreen> {
   void _handleToDoChange(ToDo todo) {
     setState(() {
       todo.isDone = !todo.isDone;
+    });
+  }
+
+  void _deleteToDoItem(String id) {
+    setState(() {
+      todosList.removeWhere((item) => item.id == id);
     });
   }
 

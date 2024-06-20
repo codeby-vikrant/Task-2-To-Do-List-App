@@ -45,7 +45,7 @@ class ToDoItem extends StatelessWidget {
               color: tdRed, borderRadius: BorderRadius.circular(5)),
           child: IconButton(
               onPressed: () {
-                print('Deleted the todo');
+                onDeleteItem(todo.id);
               },
               iconSize: 16,
               color: Colors.white,
