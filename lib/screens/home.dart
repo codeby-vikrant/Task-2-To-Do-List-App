@@ -3,9 +3,14 @@ import 'package:task_2_to_do_list_app/constants/colors.dart';
 import 'package:task_2_to_do_list_app/model/todo.dart';
 import 'package:task_2_to_do_list_app/widgets/todo_items.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   HomeScreen({super.key});
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   final todosList = ToDo.todoList();
 
   @override
@@ -33,7 +38,12 @@ class HomeScreen extends StatelessWidget {
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
-                        for (ToDo todoo in todosList) ToDoItem(todo: todoo),
+                        for (ToDo todoo in todosList)
+                          ToDoItem(
+                            todo: todoo,
+                            onToDoChanged: _handleToDoChange,
+                            onDeleteItem: () {},
+                          ),
                       ],
                     ),
                   )
@@ -86,6 +96,12 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  void _handleToDoChange(ToDo todo) {
+    setState(() {
+      todo.isDone = !todo.isDone;
+    });
   }
 
   Widget searchbox() {
