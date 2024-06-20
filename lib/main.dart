@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Flutter To Do List App',
+      debugShowCheckedModeBanner: false,
       home: HomeScreen(),
     );
   }
