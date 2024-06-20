@@ -7,7 +7,9 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: tdBGColor,
       appBar: AppBar(
+        elevation: 0,
         backgroundColor: tdBGColor,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
