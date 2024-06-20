@@ -35,7 +35,9 @@ class ToDoItem extends StatelessWidget {
           decoration: BoxDecoration(
               color: tdRed, borderRadius: BorderRadius.circular(5)),
           child: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                print('Deleted the todo');
+              },
               iconSize: 16,
               color: Colors.white,
               icon: const Icon(
