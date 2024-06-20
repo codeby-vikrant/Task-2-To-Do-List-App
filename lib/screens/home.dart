@@ -28,7 +28,14 @@ class HomeScreen extends StatelessWidget {
                             fontWeight: FontWeight.bold),
                       ),
                     ),
-                    const ToDoItem()
+                    const ToDoItem(),
+                    const ToDoItem(),
+                    const ToDoItem(),
+                    const ToDoItem(),
+                    const ToDoItem(),
+                    const ToDoItem(),
+                    const ToDoItem(),
+                    const ToDoItem(),
                   ],
                 ),
               )

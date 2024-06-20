@@ -7,6 +7,7 @@ class ToDoItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.only(bottom: 20),
       child: ListTile(
         onTap: () {
           print("Clicked on todo item");
